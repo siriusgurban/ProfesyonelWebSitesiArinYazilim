@@ -1,11 +1,855 @@
-.yellow {
-    border: 2px solid blue;
-    color: yellow;
-    height: 100px;
-    width:  100px;
+/* GENERAL SETTINGS*/
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../fonts/static/Raleway-Regular.ttf);
+}
+
+.body{
+    background: #ffffff;
+    color: 3f3f3f;
+    font: 14px / 28px arial;
+    font-family: 'Raleway';
+}
+
+h1{
+    font-size: 52px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.sectionHeader{
+    background:#500D16;
+    border-bottom: 6px solid #000000;
+    height: 60px;
+    color: #fff;
+    display: inline-block;
+    line-height: 60px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 5px 40px;
+    letter-spacing: 2px;
+    margin-top: 40px;
 
 }
 
-.d {
-    color: tomato;
+.sectionArea{
+    padding: 80px o;
+    /* margin-top: 40px; */
+}
+
+h3{
+    font-size: 16px;
+    color: #500D16;
+}
+
+/* GRID SETTINGS*/
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+
+}
+
+.featuresBody .container{
+    justify-content: space-between;
+}
+
+.col3{
+    
+    flex-grow: 1;
+    width: 33.33%;
+}
+
+.engineBody .container{
+    justify-content: space-between;
+}
+
+.col2{
+    flex-grow: 1;
+    width: 50%;
+    padding: 20px;
+}
+
+/* HOME SETTINGS*/
+
+header .logo {
+    margin-right: auto;
+}
+
+header .logo img{
+    display: block;
+    height: 70px;
+}
+
+.menu li{
+    float: left;
+}
+
+.menu li a{
+    padding: 27px 17px;
+    display: block;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #333333;
+    transition: all .5s ease;
+}
+
+/* .menu li a:last-child{
+    padding-right: 0;
+} */
+
+.menu li:hover a{
+    background: #500D16;
+    color: #ffffff;
+
+}
+
+#mainSlider{
+    height: 500px;
+    background: url(../img/mainTop.jpg) center center no-repeat;
+    background-size: cover;
+    border: 1px solid #000000;
+}
+
+/* .slider{
+    width: 100%;
+} */
+
+#mainCaption{
+    height: 500px;
+    background: rgba(0, 0, 0, .5);
+}
+
+.caption{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    width: 100%;
+}
+
+
+/* .featuresBody .container{
+    justify-content: space-between;
+}
+
+.col3{
+    flex-grow: 1;
+    width: 33.33%;
+} */
+
+.featuresTop{
+    text-align: center;
+}
+
+.item{
+    padding: 10px 20px;
+}
+
+
+.zoom{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+
+.zoom img{   
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 250px;
+    transition: all .5s ease;
+}
+
+.item .itemText{
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #500D16;
+}
+
+.item:hover .zoom img{
+    transform: scale(1.25);
+}
+
+.item:hover h3{
+    color: #ffffff;
+}
+
+.item:hover .itemText{
+    background:#500D16;
+    color: #ffffff;
+    transition: all .5s ease;
+}
+
+.btnDetails{
+    color: #500D16;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid #500D16;
+    transition: all .5s ease;
+    margin: 10px 0;
+}
+
+.item:hover .btnDetails{
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.item p{
+    margin: 20px 0;
+}
+
+
+#parallax{
+    background: linear-gradient(
+                    rgba(0, 0, 0, .7),
+                    rgba(0, 0, 0, .7)) ,
+                     url('../img/engine1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+#parallax p{
+    color: #fff;
+}
+
+
+.engineTop{
+    text-align: center;
+}
+
+
+.engineContainer{
+    position: relative;
+    width: 100%;
+
+}
+
+
+.imagineOver{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.engineOverlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(80, 13, 22, .7);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+
+.engineContainer:hover .engineOverlay{
+    width: 100%;
+}
+
+
+.engineText{
+    white-space: nowrap;
+    color: #ffffff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.engineOverlay2{
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: rgba(80, 13, 22, .7);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+
+
+.engineContainer:hover .engineOverlay2{
+    width: 100%;
+    left: 0;
+}
+
+
+footer{
+    background: #500D16;
+    text-align: center;
+}
+
+
+.footerItem{
+    padding: 80px;
+}
+
+.footerItem img{
+    height: 50px;
+    opacity: 0.5;
+}
+
+footer h3{
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+footer .fab{
+    font-size: 30px;
+    color: #95a5a6;
+    line-height: 50px;
+    transition: .3 ease;
+}
+
+footer .fab:hover{
+    color: #fff;
+}
+
+footer p{
+    color: #95a5a6;
+    line-height: 20px;
+}
+
+.footerLinks a{
+    text-decoration: none;
+    color: #95a5a6;
+    letter-spacing: 2px;
+    transition: .3 ease;
+}
+
+.footerLinks a:hover{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.socialLinks li{
+    display: inline;
+    height: 50px;
+    width: 50px;
+}
+
+
+/* CARS SETTINGS */
+
+#carsSlider{
+    height: 250px;
+    background: url('../img/mainTop.jpg') center center no-repeat;
+    background-size: cover;
+    border: 1px solid #000000;
+}
+
+#carsCaption{
+    height: 250px;
+    background: rgba(0, 0, 0, .7);
+}
+
+#inspect{
+    background-color: #f5f5f5;
+}
+
+.inspectTop{
+    text-align: center;
+}
+
+.inspectBody .col2{
+    display: flex;
+}
+
+.inspectImage{
+    width: 40%;
+}
+
+.inspectImage img{
+    width: 100%;
+    height: auto;
+}
+
+.inspectText{
+    width: 60%;
+    padding-left: 10px;
+}
+
+.date{
+    color: #333333;
+    font-size: 12px;
+    font-style: italic;
+}
+
+h4{
+    color: #500D16;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.inspectText a{
+    float: right;
+    text-decoration: none;
+    color: #500D16;
+}
+
+.inspectText a:hover{
+    text-decoration: underline;
+}
+
+.projectXTop{
+    text-align: center;
+}
+
+#projectX .containerFluid{
+    height: 500px;
+    background: url('../img/mainTop.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.captionPX{
+    display: flex;
+    background-color: rgba(0, 0, 0, .8);
+    width: 100%;
+    height: 500px;
+}
+
+.projectXInfo{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-left: 5%;
+    padding-right: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.projectXTitle{
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.projectXBTN{
+    background-color: #500D16;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 20px 40px;
+    border: none;
+    margin-top: 20px;
+    transition: all .5s ease;
+}
+
+.projectXBTN:hover{
+    background-color: #ffffff;
+    color: #500D16;
+    
+}
+
+.projectXText{
+    color: #ffffff;
+}
+
+.projectXHighlight{
+    display: inline-block;
+    background-color: #500D16;
+    padding: 30px;
+}
+
+.containerFluid .col2{
+    padding:  0;
+}
+
+.projectXDetail li{
+    color: #ffffff;
+}
+
+/* About */
+
+#aboutSlider{
+    height: 250px;
+    background: url('../img/aboutSlider.jpg') center center no-repeat;
+    background-size: cover;
+    border: 1px solid #000000;
+}
+
+#aboutCaption{
+    height: 250px;
+    background: rgba(0, 0, 0, .7);
+}
+
+#ourHistory{
+    background-color: #f5f5f5;
+}
+
+.ourHistoryTop{
+    text-align: center;
+}
+
+.ourHistoryBody .containerFluid{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.ourHistoryBody .col2{
+    display: flex;;
+}
+
+.ourHistoryDate{
+    flex: 1;
+    text-align: center;
+    background-color: #500D16;
+    color: #ffffff;
+}
+
+.ourHistoryDate p{
+    font-size: 30px;
+    letter-spacing: 2px;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate( -50%, -50%);
+}
+
+.ourHistoryImage{
+    flex: 2;
+}
+
+.ourHistoryImage img{
+    width: 100%;
+    height: 100%;
+}
+
+.ourHistoryText{
+    flex: 3;
+    margin-left: 10px;
+}
+
+.ourHistoryText p{
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate( -50%, -50%);
+}
+
+
+.teamTop{
+    text-align: center;
+}
+
+.teamBody .containerFluid{
+    display: flex;
+    width: 100%;
+}
+
+.teamMember{
+    position: relative;
+    width: 100%;
+}
+
+.teamMemberImage{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.teamMemberOverlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: #500D16;
+    transition: ease .5s;
+}
+
+.teamMember:hover .teamMemberOverlay{
+    opacity: 0;
+}
+
+.teamMember:hover .teamMemberInfo , .teamTitle{
+    color: #ffffff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.teamMemberInfo{
+    color: #ffffff;
+    background-color: rgba(80, 13, 22, .7);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: ease .5s;
+    padding: 20px;
+    text-align: center;
+}
+
+.memberSosialLinks{
+    text-align: center;
+}
+
+.memberSosialLinks li{
+    display: inline;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.memberSosialLinks .fab{
+    color: #ffffff;
+}
+
+
+/* Contact */
+
+
+#contactSlider{
+    height: 250px;
+    background: url('../img/aboutSlider.jpg') center center no-repeat;
+    background-size: cover;
+    border: 1px solid #000000;
+}
+
+#contactCaption{
+    height: 250px;
+    background: rgba(0, 0, 0, .7);
+}
+
+#gallery{
+    background-color: #f5f5f5;
+}
+
+.galleryTop{
+    text-align: center;
+}
+
+.gallerySlider{
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.gallerySliderItem{
+    width: 300%;
+    position: relative;
+    left: 0;
+    animation: slideAnimation 30s infinite;
+}
+
+.gallerySliderItem img{
+    object-fit: cover;
+    width: 33.33%;
+    float: left;
+    height: 650px;
+}
+
+@keyframes slideAnimation {
+    0% {left: 0%;}
+    25% {left: -100%;}   
+    50% {left: -200%;}
+    75% {left: -100%;}
+    100% {left: 0%;}
+}
+
+.contactTop{
+    text-align: center;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contactForm{
+    margin: 0 auto;
+    width: 60%;
+}
+
+.formItem{
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.formShape{
+    color: #ffffff;
+    float: left;
+    background: #500D16;
+    padding: 8px;
+    width: 8%;
+    text-align: center;
+}
+
+.formField{
+    color: #ffffff;
+    background-color: #500D16;
+    border: none;
+    padding: 15.5px;
+    width: 92%;
+    display: block;
+    font-size: 14px;
+}
+
+.formBtn{
+    display: block;
+    border: none;
+    background-color: #500D16;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.formBtn:hover{
+    background: #841916;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 960px){
+    .caption h1{
+        color: red;
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    footer .fab{
+        font-size: 24px;
+        color: yellow;
+    }
+
+    footer h3{
+        font-size: 16px;
+    }
+
+    .inspectBody .container{
+        flex-direction: column;
+    }
+
+    .inspectBody .container .col2{
+        width: 100%;
+    }
+
+    .ourHistoryBody .col2{
+        flex-direction: column;
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 720px){
+    header .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .logo{
+        margin: 0 auto;
+    }
+
+    .caption h1{
+        color: blue;
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+
+    .featuresBody .container{
+        flex-direction: column;
+
+    }
+
+    .featuresBody .container .col3{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .engineBody .container{
+        flex-direction: column;
+    }
+    .engineBody .container .col2{
+        width: 80%;   
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer .container .col3{
+        width: 100% ;
+    }
+
+    .sectionHeader{
+        font-size: 24px;
+    }
+
+    .inspectBody .container .col2{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .teamMemberInfo{
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .teamTitle{
+        font-size: 14px;
+    }
+
+    .formShape{
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 540px){
+    .caption h1{
+        color: green;
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    .featuresBody .container{
+        flex-direction: column;
+
+    }
+
+    .featuresBody .container .col3{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .engineBody .container .col2{
+        width: 100%;
+    }
+
+    .sectionHeader{
+        font-size: 20px;
+    }
+
+    .contactForm{
+        width: 100%;
+    }
+
 }
